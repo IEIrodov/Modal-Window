@@ -23,3 +23,9 @@ for (let i = 0; i < btnAllModal.length; i++)
 
 btnCloseModal.addEventListener('click', hideModal);
 overlay.addEventListener('click', hideModal);
+
+//add escape key to remove the modal functionality
+document.addEventListener('keydown', event => {
+  const keyPressed = event['key'];
+  if (keyPressed === 'Escape') hideModal();
+});
