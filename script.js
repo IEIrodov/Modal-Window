@@ -27,5 +27,9 @@ overlay.addEventListener('click', hideModal);
 //add escape key to remove the modal functionality
 document.addEventListener('keydown', event => {
   const keyPressed = event['key'];
-  if (keyPressed === 'Escape') hideModal();
+  if (keyPressed === 'Escape') {
+    if (!modal.classList.contains('hidden')) {
+      hideModal();
+    }
+  }
 });
